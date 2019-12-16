@@ -1,0 +1,32 @@
+{
+  "name": "markdoc-default-themes",
+  "version": "1.0.0",
+  "description": "Some default themes for the markdoc cli tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "gulp style",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaldenLiang/markdoc-default-themes.git"
+  },
+  "keywords": [
+    "cli",
+    "markdown",
+    "docs"
+  ],
+  "author": "Walden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaldenLiang/markdoc-default-themes/issues"
+  },
+  "homepage": "https://github.com/WaldenLiang/markdoc-default-themes#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-data": "^1.3.1",
+    "gulp-stylus": "^2.7.0",
+    "gulp-watch": "^5.0.1"
+  }
+}
