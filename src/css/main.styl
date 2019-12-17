@@ -1,7 +1,259 @@
+html, body
+  margin 0
+  padding 0
+  height 100%
+
+html
+  font-size 16px
+
 body
-    background #000
-    color #fff
-    font-size 16px
-    margin 15px
-    padding 15px
+  font-family "SF UI Text", "PingFang SC", -apple-system, -apple-system-body, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", "微软雅黑", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  color #24292e
+  line-height 1.5
+  font-weight 300
+
+.container
+  display flex
+  margin 0 auto
+  padding 0 20px
+  max-width 1200px
+  width 100%
+  height 100%
+  overflow hidden
+  box-sizing border-box
+  .toc
+    margin-right 50px
+    padding-top 100px
+    width 300px
+    overflow auto
+    @media (max-width: 920px)
+      display none
+    & > ul
+      padding-left 0
+      & > li
+        margin-bottom 5px
+        font-weight 500
+        font-size 14px
+        a
+          color #1f1a47
+          text-decoration none
+        ul
+          position relative
+          margin-left 5px
+          padding 0
+          li
+            position relative
+            padding-left 20px
+            margin-bottom 2px
+            line-height 24px
+            &::before
+              content ''
+              position absolute
+              top 13px
+              left 2px
+              width 12px
+              height 0
+              border-bottom 1px dashed #777676
+            &::after
+              content ''
+              position absolute
+              left 0
+              top 0
+              height 100%
+              width 0
+              border-left 1px dashed #777676
+            &:last-child
+              &::after
+                height 14px
+            a
+              color #697386
+              font-weight 400
+    ul
+      margin 0
+      list-style-type none
+      li
+        white-space nowrap
+        text-overflow ellipsis
+        overflow hidden
+
+  .content-wrap
+    flex 1
+    padding-bottom 200px
+    height 100%
+    overflow auto
     box-sizing border-box
+    h1, h2, h3, h4, h5, h6
+      position relative
+      margin-top -100px
+      margin-bottom 1rem
+      padding-top 100px
+      font-weight 400
+      line-height 1.4
+      color #142331
+      span
+        z-index 10
+        padding-right 50px
+        cursor pointer
+        a
+          &.anchor
+            position absolute
+            display none
+            margin-left 5px
+            text-decoration none
+            .iconfont
+              font-size inherit
+        &:hover
+          a
+            display inline-block
+
+      code, tt
+        font-size inherit
+
+      p
+        margin-top 0
+
+    h1
+      margin 1em auto 1.2em
+      padding-bottom .3em
+      line-height 1.2
+      font-size 2.25em
+      font-weight 300
+      text-align center
+      &::after
+        content ''
+        display block
+        margin .2em auto 0
+        width 100px
+        height 2px
+        border-bottom 2px dashed #afec9e
+
+    h2
+      padding-left 15px
+      font-size 1.75em
+      line-height 1.4
+      &::before
+        content ''
+        position absolute
+        left 0
+        bottom 0
+        height 40px
+        width 0
+        border-left 6px solid #cce5ff
+
+    h3
+      font-size 1.5em
+      line-height 1.43
+      &::before
+        content ''
+        display inline-block
+        margin-bottom .18em
+        margin-right 8px
+        width 6px
+        height 6px
+        border-radius 50%
+        background-color #9ed0ff
+        vertical-align middle
+
+    h4
+      font-size 1.25em
+      &::before
+        content ''
+        display inline-block
+        margin-bottom .18em
+        margin-right 8px
+        width 6px
+        height 2px
+        background-color #9ed0ff
+        vertical-align middle
+
+    h5
+      font-size 1em
+
+    h6
+      font-size 1em
+      color #777
+
+    table
+      padding 0
+      width 100%
+      word-break initial
+      border-collapse collapse
+      border-spacing 0
+
+      &.md-table
+        tr
+          &:nth-child(2n)
+            background-color #fafbfc
+
+      tr
+        margin 0
+        padding 0
+        border-top 1px solid #dadfe6
+
+        th, td
+          margin 0
+          padding 6px 13px
+          border 1px solid #dadfe6
+          text-align left
+
+          &:first-child
+            margin-top 0
+
+          &:last-child
+            margin-bottom 0
+
+        th
+          font-weight 400
+
+    pre
+      padding 1em
+      font-size 14px
+      background-color rgba(0, 0, 0, 0.04)
+      white-space pre-wrap
+      word-wrap break-word
+
+      code
+        padding 0
+        font-size 100%
+        background-color transparent
+    ol, ul
+      padding-left 0
+      list-style none
+      &:first-child
+        margin-top 0
+      &:last-child
+        margin-bottom 0
+      li
+        ul, ol
+          margin 0
+          margin-left 10px
+
+    blockquote, dl, ol, p, table, ul, pre
+      position relative
+      z-index 1000
+      margin 1em 0
+
+    blockquote
+      padding 0 12px
+      border-left 4px dotted #e5e8e8
+      font-size .9em
+      color #444
+    hr
+      margin 24px 0
+      padding 0
+      height .25em
+      background-color #e1e4e8
+      border 0
+    a
+      color #3399ff
+    b, strong
+      font-weight 500
+
+    code, kbd, pre, samp
+      font-size 1em
+
+    code, tt
+      margin 0 2px
+      padding 2px 4px
+      background-color #e2f0ff
+      border-radius 3px
